@@ -1,1 +1,5 @@
-<p>craft-list works!</p>
+<ul *ngIf="crafts$ | async as crafts">
+  <li *ngFor="let craft of crafts">
+    {{craft.name}}
+  </li>
+</ul>
