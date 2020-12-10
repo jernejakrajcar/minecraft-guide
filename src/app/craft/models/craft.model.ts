@@ -2,8 +2,8 @@ export interface Craft {
   id: number;
   name: string;
   image: string;
-  description: text;
-  ingredients: text;
+  description: string;
+  ingredients: string;
 }
 
 export const crafts: Craft[] = [
