@@ -1,5 +1,5 @@
 nav {
-  background-image: url(../images/minecraft-bg.png); 
+  background-image: url(../images/minecraft-bg.png);
   padding: 20px;
 }
 
@@ -7,4 +7,22 @@ h1{
   margin: 0px;
   padding: 0px;
   color: white;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 20px 0px;
+  justify-content: center;
+}
+
+li{
+  margin: 10px;
+  width: 200px;
+}
+
+a{
+  color:white;
+  text-decoration:none;
 }
