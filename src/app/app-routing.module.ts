@@ -5,11 +5,11 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'crafts',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'crafts',
-    loadChildren: () => import('./craft/craft.module').then(m => m.CraftModule)
+    loadChildren: () => import('./craft/craft.module').then(m => m.CraftModule),
   }
 ];
 

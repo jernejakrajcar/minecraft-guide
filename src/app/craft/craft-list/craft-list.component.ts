@@ -10,7 +10,7 @@ import { Craft } from '../models/craft.model';
 })
 export class CraftListComponent implements OnInit {
 
-  crafts$: Observable<Craft[]>;
+  crafts$: Observable<Craft[]>; 
   constructor(private craftService: CraftService) {}
 
   ngOnInit(): void {
