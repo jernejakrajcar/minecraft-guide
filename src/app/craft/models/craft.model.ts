@@ -10,7 +10,7 @@ export const crafts: Craft[] = [
   {
     id: 1,
     name: 'Chest',
-    image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fminecraft.fandom.com%2Fwiki%2FChest&psig=AOvVaw3iCLzv9zk7r0wJIzZYu1wz&ust=1607428420757000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLjy29Tnu-0CFQAAAAAdAAAAABAD',
+    image: '',
     description: 'Used to store blocks and items',
     ingredients: 'Wooden planks'
   },
