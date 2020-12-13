@@ -13,7 +13,7 @@ export class CraftListComponent implements OnInit {
   crafts$: Observable<Craft[]>;
 
   constructor(private craftService: CraftService) {
-    
+    this.crafts$ = [];
   }
 
   ngOnInit(): void {
