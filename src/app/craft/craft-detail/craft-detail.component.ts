@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CraftService } from './../services/craft.service';
 import { Subscription } from 'rxjs';
@@ -9,7 +9,7 @@ import { Craft } from '../models/craft.model';
   templateUrl: './craft-detail.component.html',
   styleUrls: ['./craft-detail.component.scss']
 })
-export class CraftDetailComponent implements OnInit {
+export class CraftDetailComponent implements OnInit, OnDestroy {
 
   id: number;
   craft: Craft;
@@ -27,6 +27,10 @@ export class CraftDetailComponent implements OnInit {
         this.craft = craft;
         console.log(this.craft);
       });
+  }
+
+  ngOnDestroy(): void {
+    this.craftSub$.unsubscribe();
   }
 
 }
