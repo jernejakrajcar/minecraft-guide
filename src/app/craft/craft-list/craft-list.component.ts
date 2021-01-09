@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CraftService } from './../services/craft.service';
+import { NavbarService } from 'src/app/navbar/services/navbar.service';
 import { Observable } from 'rxjs';
 import { Craft } from '../models/craft.model';
 
@@ -11,11 +12,25 @@ import { Craft } from '../models/craft.model';
 export class CraftListComponent implements OnInit {
   crafts$: Observable<Craft[]>;
 
-  constructor(private craftService: CraftService)
-  { }
+  constructor(
+    private craftService: CraftService,
+    private navbarService: NavbarService,
+  ){  }
 
   ngOnInit(): void {
     this.crafts$ = this.craftService.getCrafts();
+    this.navbarService.title.next('Crafting Guide');
   }
 
 }
+
+// export class CraftListComponent {
+//   constructor(
+//     private craftService: CraftService,
+//     private navbarService: NavbarService
+//   ) {}
+//
+//   public getCrafts(): Observable<Craft[]>{
+//     return this.get<Craft[]>(this.url);
+//   }
+// }

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CraftService } from './../services/craft.service';
+import { NavbarService } from './../../navbar/services/navbar.service';
 import { Subscription } from 'rxjs';
 import { Craft } from '../models/craft.model';
 
@@ -17,6 +18,7 @@ export class CraftDetailComponent implements OnInit, OnDestroy {
 
   constructor(
     private craftService: CraftService,
+    private navbarService: NavbarService,
     private route: ActivatedRoute
   ) { }
 
@@ -25,7 +27,7 @@ export class CraftDetailComponent implements OnInit, OnDestroy {
     this.craftSub$ = this.craftService.craft(this.id)
       .subscribe(craft => {
         this.craft = craft;
-        console.log(this.craft);
+        this.navbarService.title.next(craft.name);
       });
   }
 

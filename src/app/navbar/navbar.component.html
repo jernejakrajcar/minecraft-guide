@@ -1,5 +1,5 @@
 <nav>
-  <h1>Home</h1>
+  <h1>{{ title$ | async }}</h1>
 
   <ul>
     <li>
@@ -13,6 +13,6 @@
     <li>
       <a [routerLink]="['reset-password']" routerLinkActive="active">Reset Password</a>
     </li>
-    
+
   </ul>
 </nav>
