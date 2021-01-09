@@ -12,4 +12,8 @@ export class CraftService {
   getCrafts() {
     return of(crafts);
   }
+
+  craft(id: number) {
+    return of(crafts.find(craft => +craft.id === +id));
+  }
 }
