@@ -1,7 +1,7 @@
+
 <ul *ngIf="crafts$ | async as crafts">
   <li *ngFor="let craft of crafts">
     <a [routerLink]="craft.id">
-      {{ craft.name }} 
       <img [src]="craft.image" />
     </a>
   </li>
