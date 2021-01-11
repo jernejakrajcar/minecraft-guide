@@ -22,7 +22,7 @@ export class CraftListComponent implements OnInit {
   crafts$!: Observable<Craft[]>;
 
   ngOnInit(): void {
-    this.crafts$ = this.craftService.getCrafts();
+    this.crafts$ = this.craftService.getCraftsFromHttp();
     this.navbarService.title.next('Crafting Guide');
   }
 
