@@ -1,0 +1,11 @@
+{
+  "crafts": [
+    {
+      "id": 1,
+      "name": "Chest",
+      "image": "src/assets/images/Chest.png",
+      "description": "Used to store blocks and items",
+      "ingredients": "Wooden planks"
+    }
+  ]
+}

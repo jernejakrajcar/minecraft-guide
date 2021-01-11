@@ -9,13 +9,17 @@ import { Craft } from '../models/craft.model';
   templateUrl: './craft-list.component.html',
   styleUrls: ['./craft-list.component.scss']
 })
+
+
 export class CraftListComponent implements OnInit {
-  crafts$: Observable<Craft[]>;
+
 
   constructor(
     private craftService: CraftService,
     private navbarService: NavbarService,
-  ){  }
+  ){ }
+
+  crafts$!: Observable<Craft[]>;
 
   ngOnInit(): void {
     this.crafts$ = this.craftService.getCrafts();
