@@ -15,6 +15,10 @@ export class CraftService {
       return this.http.get<Craft[]>(this.ROOT_URL);
   }
 
+  craftFromHttp(id: number) {
+    return this.http.get<Craft>(`${this.ROOT_URL}/${id}`);
+  }
+
   getCrafts() {
     return of(crafts);
   }

@@ -24,7 +24,8 @@ export class CraftDetailComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.id = +this.route.snapshot.paramMap.get('id');
-    this.craftSub$ = this.craftService.craft(this.id)
+    this.craftSub$ = this.craftService
+      .craftFromHttp(this.id)
       .subscribe(craft => {
         this.craft = craft;
         this.navbarService.title.next(craft.name);
