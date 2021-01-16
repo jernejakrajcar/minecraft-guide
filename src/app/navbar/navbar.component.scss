@@ -15,7 +15,20 @@ h1{
 
 button{
   border: 0px;
-  margin: 10px 10px;
+  margin: 15px 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 18px;
+  background-color: darkgrey;
+  border-radius: 5px;
+  border: 2px solid white;
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:hover {
+    background-color: green;
+    color:white;
+    transform: translateY(-2px) scale(1.1);
+  }
 }
 
 ul {
