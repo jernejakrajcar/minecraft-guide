@@ -19,7 +19,7 @@ export class CraftListComponent implements OnInit {
     private navbarService: NavbarService,
   ){ }
 
-  crafts$: Observable<Craft[]>;
+  crafts$!: Observable<Craft[]>;
 
   ngOnInit(): void {
     this.crafts$ = this.craftService.getCraftsFromHttp();
