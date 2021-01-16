@@ -1,1 +1,10 @@
-<p>add-craft works!</p>
+<form [FormGroup]="craftForm" (ngSubmit)="addCraft()">
+
+  <input type="text" placeholder="Name" formControlName="name" />
+  <input type="text" placeholder="Image URL" formControlName="image" />
+  <input type="text" placeholder="Description" formControlName="description" />
+  <input type="text" placeholder="Ingredients" formControlName="ingredients" />
+
+  <button [disabled]="!craftForm.valid" type="submit">Add</button>
+
+</form>
