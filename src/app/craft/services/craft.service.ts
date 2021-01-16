@@ -11,6 +11,10 @@ export class CraftService {
 
   constructor(private http: HttpClient) { }
 
+  addCraft(craft: Craft) {
+    return this.http.post(this.ROOT_URL, craft);
+  }
+
   getCraftsFromHttp() {
       return this.http.get<Craft[]>(this.ROOT_URL);
   }
