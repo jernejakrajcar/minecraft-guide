@@ -1,4 +1,4 @@
-<form [FormGroup]="craftForm" (ngSubmit)="addCraft()">
+<form [formGroup]="craftForm" (ngSubmit)="addCraft()">
 
   <input type="text" placeholder="Name" formControlName="name" />
   <input type="text" placeholder="Image URL" formControlName="image" />

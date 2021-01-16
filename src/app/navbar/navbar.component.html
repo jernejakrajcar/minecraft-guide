@@ -16,5 +16,5 @@
 
   </ul>
 
-  <button routerLink="crafts/add">Add</button>
+  <button routerLink="crafts/add" *ngIf="!router.url.includes('crafts/add')">Add</button>
 </nav>
