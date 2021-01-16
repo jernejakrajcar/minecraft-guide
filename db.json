@@ -27,6 +27,13 @@
       "description": "Provides light and also melts ice and snow.",
       "ingredients": "Coal & Stick",
       "id": 4
+    },
+    {
+      "name": "TNT",
+      "image": "/assets/images/TNT.png",
+      "description": "Explodes when lit with a Flint & Steel, or powered by a redstone current.",
+      "ingredients": "Gunpowder & Sand",
+      "id": 5
     }
   ]
 }
