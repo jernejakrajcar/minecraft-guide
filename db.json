@@ -6,6 +6,27 @@
       "image": "/assets/images/Chest.png",
       "description": "Used to store blocks and items",
       "ingredients": "Wooden planks"
+    },
+    {
+      "name": "Ladders",
+      "image": "/assets/images/Ladders.png",
+      "description": "Allows the player to climb vertically",
+      "ingredients": "Sticks",
+      "id": 2
+    },
+    {
+      "name": "Crafting Table",
+      "image": "/assets/images/Crafting_Table.png",
+      "description": "Opens a 3x3 crafting grid when right clicked.",
+      "ingredients": "Wooden planks",
+      "id": 3
+    },
+    {
+      "name": "Torch",
+      "image": "/assets/images/Torch.png",
+      "description": "Provides light and also melts ice and snow.",
+      "ingredients": "Coal & Stick",
+      "id": 4
     }
   ]
 }
