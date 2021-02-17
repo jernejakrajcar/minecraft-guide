@@ -10,6 +10,7 @@ const routes: Routes = [
   {
     path: 'crafts',
     loadChildren: () => import('./craft/craft.module').then(m => m.CraftModule),
+    
   }
 ];
 

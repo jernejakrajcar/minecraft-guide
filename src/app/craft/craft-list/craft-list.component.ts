@@ -24,6 +24,7 @@ export class CraftListComponent implements OnInit {
   ngOnInit(): void {
     this.crafts$ = this.craftService.getCraftsFromHttp();
     this.navbarService.title.next('Crafting Guide');
+
   }
 
 }
