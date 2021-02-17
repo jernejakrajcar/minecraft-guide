@@ -34,6 +34,13 @@
       "description": "Explodes when lit with a Flint & Steel, or powered by a redstone current.",
       "ingredients": "Gunpowder & Sand",
       "id": 5
+    },
+    {
+      "name": "Furnace",
+      "image": "/assets/images/Furnace.png",
+      "description": "Allows the player to smelt",
+      "ingredients": "Cobblestone or Blackstone",
+      "id": 6
     }
   ]
 }
