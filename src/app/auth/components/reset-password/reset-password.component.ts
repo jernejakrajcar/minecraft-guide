@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from 'src/app/auth/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reset-password',
@@ -9,7 +10,7 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 })
 export class ResetPasswordComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ export class ResetPasswordComponent implements OnInit {
     this.authService.resetPassword(f.value).subscribe(resetPassObserver);
     console.log(f.value); //{ first: '', last: ''}
     console.log(f.valid); //false
+    this.router.navigate(['/login']);
   }
 
 }
