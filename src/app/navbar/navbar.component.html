@@ -1,5 +1,5 @@
 <nav>
-  <h1>{{ title$ | async }}</h1>
+  <h1 routerLink="/">{{ title$ | async }}</h1>
 
   <ul>
     <li>
@@ -15,6 +15,13 @@
     </li>
 
   </ul>
+
+  <!-- <ul>
+    <li>
+      <h3>user email</h3>
+    </li>
+
+  </ul> -->
 
   <button routerLink="crafts/add" *ngIf="!router.url.includes('crafts/add')">Add</button>
 </nav>

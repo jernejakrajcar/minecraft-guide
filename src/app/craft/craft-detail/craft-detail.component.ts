@@ -12,7 +12,7 @@ import { Craft } from '../models/craft.model';
 })
 export class CraftDetailComponent implements OnInit, OnDestroy {
 
-  id: number;
+  id: number = 0;
   craft: Craft;
   craftSub$: Subscription;
 

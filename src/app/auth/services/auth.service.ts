@@ -7,18 +7,25 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  authUrl = "http://localhost:8080/api/users/";
+  authUrl = "/api/users";
 
-  constructor(private http: HttpClient ) {  }
+  constructor(private http: HttpClient ) { }
 
-    login(email:string, password:string) {
+    login(model: any) {
 
-      return this.http.post(this.authUrl, {email,password}).pipe(
+      return this.http.get(this.authUrl, model).pipe(
         map((response: any) => {
           const user = response;
-          localStorage.setItem('email', user.email);
+          console.log(user.email);
+          if(user.result.succeeded) {
+            localStorage.setItem('email', user.email);
+          }
         })
       );
+    }
+
+    register(model: any) {
+      return this.http.post(this.authUrl, model);
     }
 
 
