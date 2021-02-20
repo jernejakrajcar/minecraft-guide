@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
       next: x => console.log("New user created"),
       error: err => console.log(err)
     };
+    
     this.authService.register(f.value).subscribe(registerObserver);
     console.log(f.value); //{ first: '', last: ''}
     console.log(f.valid); //false

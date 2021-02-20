@@ -16,12 +16,19 @@
 
   </ul>
 
-  <!-- <ul>
+  <ul *ngIf="readLocalStorageValue()==true">
     <li>
       <h3>user email</h3>
     </li>
+    <li>
+      <a routerLink="/crafts" (click)="logout()">Log out</a>
+    </li>
+    <li>
+      <button routerLink="crafts/add" *ngIf="!router.url.includes('crafts/add')">Add</button>
+    </li>
+  </ul>
 
-  </ul> -->
-
-  <button routerLink="crafts/add" *ngIf="!router.url.includes('crafts/add')">Add</button>
+  <li>
+    <button routerLink="crafts/add" *ngIf="!router.url.includes('crafts/add')">Add</button>
+  </li>
 </nav>

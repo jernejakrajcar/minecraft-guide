@@ -9,10 +9,26 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   title$ = this.navbarService.title;
+  name = false;
 
   constructor(private navbarService: NavbarService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  readLocalStorageValue() {
+    if(localStorage.getItem('name') != '')
+    {
+      name = true;
+    }
+    else {
+      name = false;
+    }
+    return name;
+  }
+
+  logout() {
+    localStorage.clear();
   }
 
 }
