@@ -1,7 +1,7 @@
 <nav>
   <h1 routerLink="/">{{ title$ | async }}</h1>
 
-  <ul>
+  <ul *ngIf="!readLocalStorageValue()">
     <li>
       <a [routerLink]="['register']" routerLinkActive="active">Register</a>
     </li>
@@ -16,7 +16,7 @@
 
   </ul>
 
-  <ul *ngIf="readLocalStorageValue()==true">
+  <ul *ngIf="readLocalStorageValue()">
     <li>
       <h3>user email</h3>
     </li>

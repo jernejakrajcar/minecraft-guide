@@ -17,13 +17,14 @@ export class NavbarComponent implements OnInit {
   }
 
   readLocalStorageValue() {
-    if(localStorage.getItem('name') != '')
+    if(localStorage.getItem('name'))
     {
       name = true;
     }
     else {
       name = false;
     }
+    console.log(name);
     return name;
   }
 

@@ -41,6 +41,13 @@
       "description": "Allows the player to smelt",
       "ingredients": "Cobblestone or Blackstone",
       "id": 6
+    },
+    {
+      "name": "Wooden planks",
+      "image": "assets/images/Wooden_Planks.png",
+      "description": "neki neki",
+      "ingredients": "nekaj",
+      "id": 7
     }
   ]
 }
