@@ -48,6 +48,13 @@
       "description": "neki neki",
       "ingredients": "nekaj",
       "id": 7
+    },
+    {
+      "name": "Stick",
+      "image": "assets/images/Stick.png",
+      "description": "Used in many other crafting recipies",
+      "ingredients": "Wooden planks",
+      "id": 8
     }
   ]
 }

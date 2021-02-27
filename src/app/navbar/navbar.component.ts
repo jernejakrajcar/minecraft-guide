@@ -9,14 +9,17 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   title$ = this.navbarService.title;
-  name = false;
 
-  constructor(private navbarService: NavbarService, private router: Router) { }
+  constructor(private navbarService: NavbarService, private router: Router) {
+
+  }
 
   ngOnInit(): void {
+
   }
 
   readLocalStorageValue() {
+    var name = false;
     if(localStorage.getItem('name'))
     {
       name = true;
@@ -24,7 +27,6 @@ export class NavbarComponent implements OnInit {
     else {
       name = false;
     }
-    console.log(name);
     return name;
   }
 

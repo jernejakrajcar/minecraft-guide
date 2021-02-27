@@ -18,7 +18,7 @@
 
   <ul *ngIf="readLocalStorageValue()">
     <li>
-      <h3>user email</h3>
+      <h3 id="showname"></h3>
     </li>
     <li>
       <a routerLink="/crafts" (click)="logout()">Log out</a>
@@ -28,7 +28,4 @@
     </li>
   </ul>
 
-  <li>
-    <button routerLink="crafts/add" *ngIf="!router.url.includes('crafts/add')">Add</button>
-  </li>
 </nav>
